@@ -160,6 +160,6 @@ All of the processes above are dockerized:
 
 # Production deployment 
 
-![Prouction deployment][](https://drive.google.com/file/d/1XpkofNcLA-HK0xVfm66iy2VwRA5nMutQ/view?usp=sharing)
+![prod][Prouction deployment](https://drive.google.com/file/d/1XpkofNcLA-HK0xVfm66iy2VwRA5nMutQ/view?usp=sharing)
 
 # Running the final code
