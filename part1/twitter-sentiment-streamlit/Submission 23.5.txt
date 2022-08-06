@@ -1,0 +1,34 @@
+ What are the major components of your system? What are the inputs and
+outputs?
+
+Tweepy API
+Twitter API
+Kafka 
+ZooKeepr
+Influkx dB
+Grafana Dashboards
+
+All running as docker conotainers
+
+● Where and how will the data be stored?
+
+Data will stored in a shared volume via docker. The data is stored as measruments in InfluxdB for part 2
+Part 1 stores the data in csv files
+
+● How will data get from one component of the system to another?
+for part 2 the data is passed from tweet collector to influxdb via Kafa queues.
+
+● What is the lifecycle of your ML/DL model?
+
+○ How frequently do you need to retrain your model? Is it at fixed intervals
+when you collect a certain amount of new data or when some other
+conditions are met?
+It would be fgood to retrain once a month to make sur the sentiment analhysis is kept up to date with the new words in tweets
+
+○ What kind of data do you need for retraining? How will you store and
+manage it?
+
+we need a set of tweets from Tqweitter for the last 30 days
+
+○ How do you know if the retrained model is good enough to deploy?
+look at the F1 scores and determin if it is equal or better than precious scores
