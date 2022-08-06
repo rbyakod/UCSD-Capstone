@@ -6,9 +6,7 @@
 
 Local deployment is done through this [docker-compose.yaml](docker-compose.yaml) file.
 
-Compose offers a way to control the order of statup and shutdown of containers through the `depends_on` option, but, by design, [there is no way to delay statup until a service becomes available](https://docs.docker.com/compose/startup-order/) - unless we run a script that waits for a service to become available with a `command` option.
-
-> To handle this, design your application to attempt to re-establish a connection to the database after a failure. If the application retries the connection, it can eventually connect to the database.
+To handle this, design your application to attempt to re-establish a connection to the database after a failure. If the application retries the connection, it can eventually connect to the database.
 
 ### Requirements
 
@@ -19,6 +17,9 @@ Compose offers a way to control the order of statup and shutdown of containers t
 
 Services need to be started in a specific order with the following commands:
 ```
+please remove or comment out the cluster ID row in ./persistance/kafka/meta.properties 
+before starting next comannd everytime
+
 # Start Kafka and InfluxDB
 docker-compose up -d kafka influxdb
 
@@ -30,6 +31,8 @@ docker-compose up -d producer consumer
 
 ### Useful Links
 - [Twitter Developers portal](https://developer.twitter.com/en/docs)
+- [Sentiment Analysis](https://medium.com/analytics-vidhya/twitter-sentiment-analysis-b9a12dbb2043)
+- [Top 5 sentiment analysis projects](https://medium.com/analytics-vidhya/top-5-unknown-sentiment-analysis-projects-on-github-to-help-you-through-your-nlp-projects-8d8f195e80fc)
 - [Sentiment Analysis with Python NLTK](https://www.digitalocean.com/community/tutorials/how-to-perform-sentiment-analysis-in-python-3-using-the-natural-language-toolkit-nltk)
 - [Kafka Quickstart](https://kafka.apache.org/quickstart)
 - [A Practical Introduction to Kafka Storage Internals](https://medium.com/@durgaswaroop/a-practical-introduction-to-kafka-storage-internals-d5b544f6925f)
