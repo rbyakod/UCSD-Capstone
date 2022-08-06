@@ -1,4 +1,4 @@
-# How to run thw streamlit app
+# How to run the streamlit app
 
 
 1. Update the procfile (this is starting point of the program)
