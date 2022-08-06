@@ -142,8 +142,7 @@ F1 Score
 
 ## Model Deployment:
 
-**I created 2 applications.
-**
+**I created 2 applications.**
 
 **First application** shows the live sentiment of tweets when executed. It is built using Streamlit APIs and is dockerized. When you provide a stock symbol, it downloads last 10 mins of tweets and analysis using one of the models we built () and outputs the results.
 
