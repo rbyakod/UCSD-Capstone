@@ -160,7 +160,7 @@ All of the processes above are dockerized:
 
 # Production deployment 
 
-![prod][Prouction deployment](https://drive.google.com/file/d/1XpkofNcLA-HK0xVfm66iy2VwRA5nMutQ/view?usp=sharing)
+![Architecture diagram](./part2/twitter-kafka-influxdb/main/docs/twitter-sentiment-analysis-diagram-original.jpgtwitter-sentiment-analysis-diagram.png)
 
 # Running the final code
 There are 2 applications.
