@@ -49,8 +49,6 @@ img {
 
 def main():
     """ Common ML Dataset Explorer """
-    # st.title("Live twitter Sentiment analysis")
-    # st.subheader("Select a topic which you'd like to get the sentiment analysis on :")
 
     html_temp = """ 
     <div style="background-color:tomato;"><p style="color:white;font-size:40px;padding:9px">Live twitter Sentiment analysis</p></div>
@@ -142,7 +140,7 @@ def main():
         
         # Call the function to extract the data. pass the topic and filename you want the data to be stored in.
         with st.spinner("Please wait, Tweets are being extracted"):
-            get_tweets(Topic , Count=200)
+            get_tweets(Topic , Count=500)
         st.success('Tweets have been Extracted !!!!')    
 
         # Call a function to get Clean tweets
@@ -226,8 +224,8 @@ def main():
             st.pyplot()
         
     st.sidebar.header("About App")
-    st.sidebar.info("A Twitter Sentiment analysis Project which will scrap twitter for the topic selected by the user. The extracted tweets will then be used to determine the Sentiments of those tweets. \
-                    The different Visualizations will help us get a feel of the overall mood of the people on Twitter regarding the topic we select.")
+    st.sidebar.info("A Twitter Sentiment analysis Project which will get tweets for the topic selected by the user. The extracted tweets will then be used to determine the Sentiments of those tweets. \
+                    The different Visualizations help us understand both the processing of data as well as the various graphs in streamlit.")
     st.sidebar.text("Built with Streamlit")
     
     st.sidebar.header("For Any Queries/Suggestions Please reach out at :")
