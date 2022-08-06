@@ -60,7 +60,7 @@ We built 3 models
 
 ## Clean the data and do the exploratory analysis
 
-![ght][Procesiong Workflow](https://drive.google.com/file/d/1SqDAgjBPFi3fzK5Ab6ylKZqWa42CKJX9/view?usp=sharing))
+![Procesiong Workflow](Processing%20Workflow.png)
 
  **Preprocessing**
 Steps involved in pre-processing:
@@ -160,7 +160,7 @@ All of the processes above are dockerized:
 
 # Production deployment 
 
-![Architecture diagram](./part2/twitter-kafka-influxdb/main/docs/twitter-sentiment-analysis-diagram-original.jpgtwitter-sentiment-analysis-diagram.png)
+![Architecture diagram](twitter-sentiment-analysis-diagram.png)
 
 # Running the final code
 There are 2 applications.
