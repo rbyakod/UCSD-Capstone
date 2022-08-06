@@ -164,5 +164,7 @@ All of the processes above are dockerized:
 
 # Running the final code
 There are 2 applications.
+
 1 - streamlit live sentiment analysis using logidtic regression -- please see README in part1
+
 2 - scaled version using kafka/influxDB/grafana -- please see README in part2
