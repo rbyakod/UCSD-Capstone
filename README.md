@@ -2,7 +2,7 @@ Work in progress
 
 # Twitter sentiment analysis
 
-**Business Understanding**:
+# **Business Understanding**:
 
 Greed and fear are the two driving forces of the stock market. People's sentiments of the market play an important role in driving the certain stock prices up or down. In the past, there was a correlation between Tweets and social media messages driving the stock prices.
 
@@ -144,7 +144,9 @@ F1 Score
 
 **I created 2 applications.
 **
+
 **First application** shows the live sentiment of tweets when executed. It is built using Streamlit APIs and is dockerized. When you provide a stock symbol, it downloads last 10 mins of tweets and analysis using one of the models we built () and outputs the results.
+
 
 **The second application** is a scaled verion of this. It uses Tweepy streaming API to get continuous stream of tweets, sned them to a Kafka queue. Then another process resds the tweets off of the kafka queue and analyses using the models. and output the results in an influxDB.
 
