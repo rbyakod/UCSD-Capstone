@@ -7,6 +7,7 @@ from influxdb import InfluxDBClient
 from influxdb.exceptions import InfluxDBServerError, InfluxDBClientError
 import flatten_json as fs
 
+
 class TweetsProducer(KafkaProducer):
 
     def create_headers(self, bearer_token):

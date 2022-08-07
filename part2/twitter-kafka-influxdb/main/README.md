@@ -12,6 +12,41 @@ To handle this, design your application to attempt to re-establish a connection 
 
 - After obtaining your set of Twitter API key and secret, you have to set those in the [secret.ini](./produce-tweets/secret.ini) file.
 
+
+## CONFIGURATION:
+
+Please remove or comment out the cluster ID row in ./persistance/kafka/meta.properties 
+before starting kafka command everytime.
+
+1 - please remove or comment out the cluster ID row in ./persistance/kafka/meta.properties 
+before starting next command everytime
+
+2 - add your twitter credentials to the secre.ini file
+
+3 - docker exec -it <influxdb container id> bash
+- infkux
+- create database sentiments
+- create database languages
+- quit
+- exit
+
+3 - open grafana by going to http://localhost:3000
+
+    1 - sign in and provide/create root user and password 
+
+    2 - choose Datasources menu and create 2 influxdb datasources
+
+    3 - create an influxdb datasource names Influxdb-tweets, databse as languages, 
+host as http://<influxDB container NAME>:8086/
+
+    4 - create an influxdb datasource names Influxdb-sentiments, databse as sentiment, host as http://<influxDB container NAME>:8086/
+
+4 - Create a docker network by the name "twittersentimentanalysis_network" using
+command docker network create <network name>
+
+**<VERY IMPORTANT to test the datasources -- make sure you provide rhe influxdb CONTANIER NAME>
+**
+
 # Building docker files
 
 cd to consume-tweets
@@ -26,7 +61,8 @@ if you wish to push the images to docker hub then follow these steps below:
 docker login -u <your username>
 docker push <image id>
 
-go backm to main directory
+go back to main directory
+
 
 ### Starting the Services
 
@@ -46,33 +82,6 @@ docker-compose up -d producer consumer
 
 you can check that the producer/consumer are working by chekcing their logs
 docker logs -f <docker container id>
-
-## CONFIGURATION:
-
-Please remove or comment out the cluster ID row in ./persistance/kafka/meta.properties 
-before starting kafka command everytime.
-
-1 - please remove or comment out the cluster ID row in ./persistance/kafka/meta.properties 
-before starting next command everytime
-
-2 - docker exec -it <influxdb container id> bash
-- infkux
-- create database sentiments
-- create database languages
-- quit
-- exit
-
-3 - open grafana by going to http://localhost:3000
-1 - sign in and provide/create root user and password
-2 - choose Datasources menu and create 2 influxdb datasources
-3 - create an influxdb datasource names Influxdb-tweets, databse as languages, 
-host as http://<influxDB container NAME>:8086/
-4 - create an influxdb datasource names Influxdb-sentiments, databse as sentiment, 
-host as http://<influxDB container NAME>:8086/
-
-**<VERY IMPORTANT to test the datasources -- make sure you provide rhe influxdb CONTANIER NAME>
-**
-
 
 ### Useful Links
 - [Twitter Developers portal](https://developer.twitter.com/en/docs)

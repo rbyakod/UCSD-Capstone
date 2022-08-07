@@ -2,6 +2,7 @@ import pickle
 import sklearn
 import pandas as pd
 
+
 def load_logistics_vectorizer():
     model_dir = 'trained_models/'
     vec_file = model_dir + 'vectorizer-logistics.pickle'

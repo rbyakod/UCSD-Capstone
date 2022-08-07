@@ -3,7 +3,9 @@
 
 1. Update the procfile (this is starting point of the program)
 2. update the setup.sh file
-3. Dump all this files directly in Github Repository.(Not inside folder)
+3. Make suere you create a file called .env in 
+the root folder of this project and add your Twitter keys in it
+4. Dump all this files directly in Github Repository.(Not inside folder)
 
 ## Docker Instructions:
 ====================
